@@ -1,3 +1,17 @@
+const calc = require('./calculator');
+
+function ejecutarDivision() {
+  const n1 = parseFloat(document.getElementById("num1").value);
+  const n2 = parseFloat(document.getElementById("num2").value);
+
+  try {
+    const resultado = calc.dividir(n1, n2);
+    document.getElementById("resultado").textContent = resultado;
+  } catch (error) {
+    document.getElementById("resultado").textContent = error.message;
+  }
+}
+
 function sumar() {
   const n1 = parseFloat(document.getElementById("num1").value);
   const n2 = parseFloat(document.getElementById("num2").value);
